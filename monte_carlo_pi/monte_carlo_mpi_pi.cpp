@@ -24,7 +24,7 @@ __global__ void calculate_pi(int* hits, int device) {
     }
 }
 
-int get_deviceProp(nt deviceID)
+int get_deviceProp(nt deviceId)
 {
   cudaDeviceProp props;
   cudaGetDeviceProperties(&props, deviceId);
