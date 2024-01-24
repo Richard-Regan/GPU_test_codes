@@ -24,7 +24,7 @@ __global__ void calculate_pi(int* hits, int device) {
     }
 }
 
-int get_deviceProp(nt deviceId)
+int get_deviceProp(int deviceId)
 {
   cudaDeviceProp props;
   cudaGetDeviceProperties(&props, deviceId);
@@ -39,7 +39,7 @@ int get_deviceProp(nt deviceId)
   int warpSize = props.warpSize;
 
 
-  printf("Device ID: %d\nNumber of SMs: %d\nCompute Capability Major: %d\nCompute Capability Minor: %d\nWarp Size: %d\n", deviceId, multiProcessorCount, computeCapabilityMajor, computeCapabilityMinor, warpSize);
+  printf("\tDevice ID: %d\n\tNumber of SMs: %d\n\tCompute Capability Major: %d\n\tCompute Capability Minor: %d\n\tWarp Size: %d\n\n", deviceId, multiProcessorCount, computeCapabilityMajor, computeCapabilityMinor, warpSize);
   }
 
 int main(int argc, char** argv) {
