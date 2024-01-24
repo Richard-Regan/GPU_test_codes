@@ -24,7 +24,7 @@ __global__ void calculate_pi(int* hits, int device) {
     }
 }
 
-int get_deviceProp()
+int get_deviceProp(nt deviceID)
 {
   cudaDeviceProp props;
   cudaGetDeviceProperties(&props, deviceId);
@@ -70,7 +70,7 @@ int main(int argc, char** argv) {
     int dev = rank;
     cudaSetDevice(dev);
     
-    get_deviceProp();
+    get_deviceProp(dev);
 
     // Allocate host and device values
     int* hits;
