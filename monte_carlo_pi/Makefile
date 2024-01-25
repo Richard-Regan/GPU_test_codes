@@ -1,4 +1,4 @@
-
+CC=nvcc
 
 monte_carlo_pi_hpc.exe : monte_carlo_pi.cpp
 	module purge
